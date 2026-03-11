@@ -484,6 +484,58 @@ arol@p20224:~$ tail -n 1 ~/.ssh/id_dsa.pub
 ssh-dss AAAAB3NzaC1kc3MAAACBAIQSh2DAAt3d4IO9ItNO28acqfIO14YrJJOcvUQFLtaUfr3jwiy882dGBPDR7u4KCdvYiWospmWchgW0sFI9EtGryIhlBklDK0eMCEU3zOwH7h7hkqQDp2OwcRixTGgI7YfiBMM7fMNUEmODzsqb/Thd7P/uYyhz76sEYzwI6tHTAAAAFQDWtCzd2SZHX+PZFM0KlEFp6jnK8wAAAH9p4+ywYD9B3BObPLftKNTROYVs28l8GY5LwSQpssuCAnyn+YmFllwtnCZ0q2SdcP0sm1fxFtTanfzv8pLj3cwbHp/pGaY1a1jY2JWXZe4JQDsAOccz+NCiE51vhTIiZCAfk2ROa++iEuadn5Go6YQ0qUQoy+qCkyVDUz7+wFnoAAAAgBux/2/VIcG8ADVDa2ObO94zo7/nNmYlIQoDVdzrdTZDZkU6VceaTM5aH0ywpe8mpfrky440vxCjz2MmV9KlxlMqS6oGExrHB4Qi2V3R5R70yGfVSn8Neags04iuur+55L8BOKoz0FmTAFYxD2t1N7lmIW49fu1W3XXvMIzOmfq0 arol@p20224
 ```
 
+***4. Placez votre cl´e publique dans le fichier ~/.ssh/authorized_keys de votre compte
+sur la machine distante (machine2).
+V´erifiez que vous pouvez maintenant vous connecter avec ssh sans avoir `a saisir
+de mot de passe.***
+
+```code
+arol@p20224:~$ ssh-copy-id arol@192.168.52.24
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/arol/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+arol@192.168.52.24's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'arol@192.168.52.24'"
+and check to make sure that only the key(s) you wanted were added.
+
+arol@p20224:~$ ssh arol@192.168.52.24
+Linux p20224 5.10.0-25-amd64 #1 SMP Debian 5.10.191-1 (2023-08-16) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Mar 11 14:54:49 2026 from 192.168.52.21
+```
+
+**Explication** :
+
+Je place ma clé publique dans le fichier authorized_keys sur la machine distante, ce qui me permet de me connecter via SSH sans entrer de mot de passe à chaque fois.
+
+
+***3- Copies distantes avec SSH***
+
+Utilisation de scp pour copier un répertoire à distance : 
+```code
+arol@p20224:~$ scp -rp /home/sankou/documents arol@192.168.52.21:/home/utilisateur/
+```
+**Explication** :
+
+La commande scp (secure copy) permet de copier des fichiers ou des répertoires entre une machine locale et distante de manière sécurisée en utilisant SSH. L'option -r est utilisée pour copier récursivement tout le répertoire et son contenu, et l'option -p conserve les attributs des fichiers (permissions, dates, etc.).
+
+***4- Copies distantes incrémentales avec rsync
+Création d'un répertoire avec des fichiers et sous-répertoires***
+
+
+
+
+
+
 
 
 
