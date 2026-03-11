@@ -477,6 +477,12 @@ The key's randomart image is:
 Cette commande génère une paire de clés DSA. La clé publique sera copiée sur la machine distante pour permettre une connexion sans avoir à entrer de mot de passe à chaque fois.
 
 ***Quatre premiers et derniers octets de la clé publique :***
+```code
+arol@p20224:~$ head -n 1 ~/.ssh/id_dsa.pub
+ssh-dss AAAAB3NzaC1kc3MAAACBAIQSh2DAAt3d4IO9ItNO28acqfIO14YrJJOcvUQFLtaUfr3jwiy882dGBPDR7u4KCdvYiWospmWchgW0sFI9EtGryIhlBklDK0eMCEU3zOwH7h7hkqQDp2OwcRixTGgI7YfiBMM7fMNUEmODzsqb/Thd7P/uYyhz76sEYzwI6tHTAAAAFQDWtCzd2SZHX+PZFM0KlEFp6jnK8wAAAH9p4+ywYD9B3BObPLftKNTROYVs28l8GY5LwSQpssuCAnyn+YmFllwtnCZ0q2SdcP0sm1fxFtTanfzv8pLj3cwbHp/pGaY1a1jY2JWXZe4JQDsAOccz+NCiE51vhTIiZCAfk2ROa++iEuadn5Go6YQ0qUQoy+qCkyVDUz7+wFnoAAAAgBux/2/VIcG8ADVDa2ObO94zo7/nNmYlIQoDVdzrdTZDZkU6VceaTM5aH0ywpe8mpfrky440vxCjz2MmV9KlxlMqS6oGExrHB4Qi2V3R5R70yGfVSn8Neags04iuur+55L8BOKoz0FmTAFYxD2t1N7lmIW49fu1W3XXvMIzOmfq0 arol@p20224
+arol@p20224:~$ tail -n 1 ~/.ssh/id_dsa.pub
+ssh-dss AAAAB3NzaC1kc3MAAACBAIQSh2DAAt3d4IO9ItNO28acqfIO14YrJJOcvUQFLtaUfr3jwiy882dGBPDR7u4KCdvYiWospmWchgW0sFI9EtGryIhlBklDK0eMCEU3zOwH7h7hkqQDp2OwcRixTGgI7YfiBMM7fMNUEmODzsqb/Thd7P/uYyhz76sEYzwI6tHTAAAAFQDWtCzd2SZHX+PZFM0KlEFp6jnK8wAAAH9p4+ywYD9B3BObPLftKNTROYVs28l8GY5LwSQpssuCAnyn+YmFllwtnCZ0q2SdcP0sm1fxFtTanfzv8pLj3cwbHp/pGaY1a1jY2JWXZe4JQDsAOccz+NCiE51vhTIiZCAfk2ROa++iEuadn5Go6YQ0qUQoy+qCkyVDUz7+wFnoAAAAgBux/2/VIcG8ADVDa2ObO94zo7/nNmYlIQoDVdzrdTZDZkU6VceaTM5aH0ywpe8mpfrky440vxCjz2MmV9KlxlMqS6oGExrHB4Qi2V3R5R70yGfVSn8Neags04iuur+55L8BOKoz0FmTAFYxD2t1N7lmIW49fu1W3XXvMIzOmfq0 arol@p20224
+```
 
 
 
