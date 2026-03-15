@@ -528,8 +528,12 @@ arol@p20224:~$ scp -rp /home/sankou/documents arol@192.168.52.21:/home/utilisate
 
 La commande scp (secure copy) permet de copier des fichiers ou des répertoires entre une machine locale et distante de manière sécurisée en utilisant SSH. L'option -r est utilisée pour copier récursivement tout le répertoire et son contenu, et l'option -p conserve les attributs des fichiers (permissions, dates, etc.).
 
-***4- Copies distantes incrémentales avec rsync
-Création d'un répertoire avec des fichiers et sous-répertoires***
+**CONCLUSION**
+
+Ce TP m’a permis de découvrir plusieurs outils importants utilisés en administration système sous Linux pour gérer les logiciels, surveiller l’espace disque et effectuer des sauvegardes à distance. J’ai appris à utiliser le gestionnaire de paquets APT pour rechercher, installer et mettre à jour des logiciels, ce qui est essentiel pour maintenir un système sécurisé et à jour.
+J’ai également utilisé les commandes df et du afin d’analyser l’utilisation de l’espace disque sur le système et identifier les fichiers ou répertoires qui occupent le plus de place. Cela m’a permis de mieux comprendre comment surveiller l’état du stockage et anticiper les problèmes d’espace disque.
+Enfin, la partie sur SSH, scp et rsync m’a montré comment copier des fichiers vers une autre machine via le réseau et mettre en place une sauvegarde distante. J’ai compris l’intérêt des sauvegardes incrémentales avec rsync, qui permettent de copier uniquement les fichiers modifiés et donc de gagner du temps et de la bande passante.
+Globalement, ce TP m’a permis de mieux comprendre les outils essentiels utilisés par un administrateur système pour gérer les logiciels, surveiller les ressources et automatiser les sauvegardes, ce qui est indispensable pour assurer la fiabilité et la sécurité d’un système Linux.
 
 
 
